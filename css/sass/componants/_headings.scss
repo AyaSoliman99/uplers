@@ -1,0 +1,11 @@
+/* Start Headings */
+.h3{
+    font-size: 30px;
+    // text-transform: capitalize;
+    text-align: center;
+    margin: 20px auto 40px;
+    &::first-letter{
+        text-transform: capitalize;
+    }
+}
+/* End Headings*/

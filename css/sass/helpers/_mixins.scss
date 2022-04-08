@@ -1,0 +1,74 @@
+@mixin breakPoints($point){
+    @if ($point ==mobile){
+        @media (max-width:767px) {
+            @content;
+        }
+    }@else if($point ==small){
+        @media (min-width:768px) and (max-width:991px) {
+            @content;
+        }
+    }@else if ($point == medium){
+       @media (min-width:992px) and (max-width:1199px) {
+           @content;
+       }
+    }@else if ($point == large){
+       @media (min-width:1200px) {
+           @content;
+       }
+    }
+}
+
+
+
+// mixin for overlay => main properties of overlay
+
+@mixin overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin p{
+    p{
+        font-size: 28px;
+        font-weight: bold;
+        
+    }
+    @include breakPoints(mobile){
+        p{
+            font-size: 24px;
+        }
+    }
+}
+// mixin for prefixes 
+
+//  Bs => propros program can put my prifexs automatically
+ @mixin prefixer ($property ,$value ,$preifixes:()) {
+     @each $prefix in $preifixes {
+         #{"-" + $prefix + "-" + $property} : $value;
+     }
+     #{$property} : $value;
+ }
+
+// mixin for animation 
+
+@mixin keyFrame($anime-name) {
+    @-webkit-keyframes #{$anime-name}{
+        @content;
+    }
+    @-moz-keyframes #{$anime-name}{
+        @content;
+    }
+    @keyframes #{$anime-name}{
+        @content;
+    }
+}

@@ -1,0 +1,534 @@
+/* Start Landing Section*/
+.landing {
+  @include padding($padding null);
+  min-height: 100vh;
+  background-image: url(../imgs/home-banner.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  .text-content {
+    @include padding(null 20px);
+    @include position(absolute, 50% null null 0);
+    transform: translateY(-50%);
+    width: 70%;
+    h1 {
+      font-size: 40px;
+      span {
+        position: relative;
+        text-transform: capitalize;
+        &::after {
+          content: "";
+          @include position(absolute, null null -2px 0);
+          @include size(100%, 2px);
+          background-color: $heading-color;
+        }
+      }
+    }
+    p {
+      font-size: 30px;
+    }
+  }
+  @include breakPoints(small) {
+    .text-content {
+      width: 100%;
+    }
+  }
+  @include breakPoints(mobile) {
+    .text-content {
+      width: 100%;
+      h1 {
+        font-size: 30px;
+      }
+      p {
+        font-size: 20px;
+      }
+    }
+  }
+}
+/* End Landing Section*/
+
+/*Start jobs-names Section*/
+.jobs-names {
+  @include padding($padding null);
+  .heading {
+    h3 {
+      margin: 0 0 30px;
+      font-size: 25px;
+      line-height: 1.8;
+      font-weight: normal;
+    }
+  }
+  ul {
+    li {
+      font-size: 20px;
+      font-weight: 700;
+      margin: 25px 0;
+      text-transform: capitalize;
+      span {
+        position: relative;
+        &::before {
+          content: "";
+          @include position(absolute, null null -6px 0);
+          @include size(100%, 3px);
+          border-radius: 20px;
+          background-color: $main-color;
+          box-shadow: -2px 2px 5px #080808;
+        }
+      }
+    }
+  }
+  @include breakPoints(mobile) {
+    .heading {
+      h3 {
+        font-size: 18px;
+      }
+    }
+    ul {
+      li {
+        font-size: 16px;
+      }
+    }
+    .col-sm-4 {
+      width: auto;
+    }
+  }
+  @include breakPoints(small) {
+    .col-sm-4 {
+      width: 50%;
+    }
+  }
+}
+/* End jobs-names Section */
+
+/*Start Testimonials*/
+.testimonials {
+  @include padding($padding null);
+  background-color: #111;
+  overflow: hidden;
+  .carouselTicker__list {
+    overflow: visible;
+    cursor: grab;
+    .carouselTicker__item {
+      border: none;
+      overflow: visible;
+      width: 400px;
+      height: 500px;
+      position: relative;
+      margin: 0 20px;
+      transition: $transition;
+      &:hover {
+        transform: scale(1.1);
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        z-index: 0;
+        transition: $transition;
+      }
+      &::before {
+        content: "";
+        @include overlay;
+        background-color: rgba($color: #000000, $alpha: 0.7);
+        z-index: 2;
+        transition: $transition;
+      }
+      &:hover:before {
+        background-color: rgba($color: $main-color, $alpha: 0.9);
+      }
+      h3 {
+        position: absolute;
+        top: 20px;
+        left: 30px;
+        z-index: 4;
+        font-size: 20px;
+        text-transform: capitalize;
+        color: white;
+        z-index: 2000;
+        transition: $transition;
+      }
+      &:hover h3 {
+        font-size: 22px;
+      }
+    }
+    .video {
+      width: 500px;
+      i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 3;
+        font-size: 60px;
+        color: $bg-color;
+        transition: $transition;
+      }
+      &:hover i {
+        transform: translate(-50%, -50%) scale(1.1);
+      }
+    }
+    .img {
+      width: 350px;
+      p {
+        position: absolute;
+        top: 60%;
+        z-index: 3;
+        left: 0;
+        line-height: 1.6;
+        color: $main-color;
+        font-size: 16px;
+        font-weight: 500;
+        padding: 0 10px;
+        transition: $transition;
+        i {
+          top: -25px;
+          position: absolute;
+          left: 20px;
+          font-size: 25px;
+          display: block;
+          color: white;
+          transition: $transition;
+        }
+      }
+      &:hover p {
+        color: $heading-color;
+      }
+    }
+  }
+}
+/*End Testimonials*/
+
+/*Start Get-acsess Section*/
+.get-access {
+  @include padding($padding null);
+  overflow: hidden;
+  .box {
+    position: relative;
+    &::before {
+      content: "";
+      @include position(absolute, 0px null null -7px);
+      @include size(100%, 100%);
+      background: url(../imgs/about-shape.svg) no-repeat;
+      background-size: contain;
+      z-index: -1;
+      animation: rotate 10s infinite linear alternate;
+    }
+  }
+  .text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    h3 {
+      position: relative;
+      font-size: 22px;
+      line-height: 1.6;
+      .ulper-shape {
+        position: absolute;
+        background: url(../imgs/uplers-shape.svg) no-repeat;
+        background-size: contain;
+        @include size(50px);
+        top: -10px;
+        left: -20px;
+        z-index: -1;
+      }
+    }
+  }
+  .part-2 {
+    @include padding($padding null);
+    .text-content {
+      p {
+        // padding-right: 10px;
+        font-size: 18px;
+        line-height: 1.6;
+        color: $heading-color;
+        margin-bottom: 25px;
+      }
+    }
+    .counters {
+      border-left: 1px solid $paragraph-color;
+      text-align: center;
+      .counter {
+        margin-bottom: 20px;
+        p {
+          font-size: 20px;
+          text-transform: capitalize;
+        }
+        h3 {
+          font-size: 80px;
+          margin-bottom: 5px;
+          display: inline-block;
+        }
+        span {
+          font-size: 80px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  @include breakPoints(mobile) {
+    .part-2 {
+      .counters {
+        text-align: left;
+        border-left: none;
+        .counter {
+          h3 {
+            font-size: 40px;
+          }
+          span {
+            font-size: 40px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include keyFrame(rotate) {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(200deg);
+  }
+}
+
+/*End Get-acsess Section*/
+
+/* Start Trusted brands */
+.trusted-brands {
+  .parent {
+    margin: 0 10px;
+    background-color: $heading-color;
+  }
+  @include padding($padding null);
+  overflow: hidden;
+  position: relative;
+  .container {
+    .content {
+      @include padding(50px null);
+      .img {
+        // position: absolute;
+        position: relative;
+        img {
+          position: absolute;
+          right: -110px;
+          top: 20px;
+        }
+      }
+      .brands {
+        p {
+          color: $main-color;
+          font-size: 24px;
+          line-height: 1.6;
+          font-weight: bold;
+          margin-bottom: 30px;
+        }
+        .imgs-brands {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          gap: 40px;
+        }
+      }
+    }
+  }
+  @include breakPoints(mobile) {
+    .container {
+      .content {
+        .brands {
+          .imgs-brands {
+            gap: 20px;
+          }
+        }
+        .img {
+          img {
+            margin-top: 20px;
+            position: relative;
+            top: auto;
+            right: auto;
+          }
+        }
+      }
+    }
+  }
+  @include breakPoints(small) {
+    .container {
+      .content {
+        .img {
+          img {
+            margin-top: 20px;
+            position: relative;
+            top: auto;
+            right: auto;
+          }
+        }
+      }
+    }
+  }
+}
+/* End Trusted brands */
+/* Start engage-us section */
+.engage-us {
+  @include padding($padding null);
+  transition: $transition;
+  .box {
+    margin: 60px 0;
+    .text {
+      margin: 20px 0;
+      h4 {
+        font-size: 24px;
+        margin-bottom: 15px;
+        text-transform: capitalize;
+      }
+      p {
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+.change-bg {
+  background-color: $alt-bg-color;
+  color: white;
+}
+
+/* End engage-us section */
+
+/* Start Case Studies section */
+.case-studies {
+  .boxs {
+    .box {
+      position: relative;
+      flex-basis: 33.33333%;
+      background-size: cover;
+      padding: 70px 0;
+      text-align: center;
+      z-index: 1;
+      .img {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .text {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 4;
+        background-color: transparent;
+        text-align: center;
+        transition: $transition;
+        opacity: 0;
+        p {
+          @include position(absolute, 0% null null 50%);
+          transform: translateX(-50%);
+          font-size: 20px;
+          font-weight: bold;
+          transition: $transition;
+          width: 100%;
+          @include padding(null 10px);
+        }
+        a {
+          @include position(absolute, null null 0% 50%);
+          transform: translateX(-50%);
+        }
+        &:hover p {
+          top: 20%;
+        }
+        &:hover a {
+          bottom: 10%;
+        }
+      }
+      &:hover .text {
+        background-color: rgba($color: $main-color, $alpha: 0.7);
+        opacity: 1;
+      }
+    }
+  }
+  .view-more-cases {
+    @include padding(20px 0);
+    a {
+      font-size: 25px;
+      text-transform: capitalize;
+      border-bottom: 2px solid $heading-color;
+      color: $heading-color;
+      transition: $transition;
+      &:hover {
+        color: #949494;
+        border-color: #949494;
+      }
+    }
+  }
+}
+@include breakPoints(mobile) {
+  .case-studies {
+    .boxs {
+      .box {
+        flex-basis: 100%;
+      }
+    }
+  }
+}
+
+/* End Case Studies section */
+
+/*  Start schedule a call section */
+.schedule-call {
+  @include padding($padding 0);
+  background-color: $bg-color2;
+  #{$all-text-inputs},
+  .want-options {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid $heading-color;
+    margin-bottom: 40px;
+    transition: $transition;
+  }
+  #{$all-text-inputs-focus} {
+    outline: none;
+    border-bottom-color: $main-color;
+  }
+  input[type="text"]::placeholder,
+  input[type="email"]::placeholder,
+  textarea::placeholder {
+    color: $heading-color;
+  }
+  .want-options {
+    position: relative;
+    bottom: 2px;
+    p {
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 16px;
+      text-transform: capitalize;
+      color: $heading-color;
+    }
+    ul {
+      width: 100%;
+      display: none;
+      @include position(absolute, 106% null null 0);
+      background-color: #fff;
+      li {
+        font-size: 16px;
+        padding: 5px;
+        text-transform: capitalize;
+        border-bottom: 1px solid $bg-color2;
+        cursor: pointer;
+        &:hover {
+          background-color: $bg-color2;
+        }
+      }
+    }
+  }
+}
+/*  End schedule a call section */

@@ -1,0 +1,22 @@
+/* Start Landing Section */ 
+.landing-section{
+    @include padding($padding null);
+    min-height: 98vh;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    .text{
+        // width: 600px;
+        max-width: 600px;
+        h2{
+            font-size: 44px;
+            margin-bottom: 15px;
+        }
+        p{
+            font-size: 18px;
+            line-height: 1.7;
+        }
+    }
+}
+/* End Landing Section */ 

@@ -1,0 +1,83 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2500;
+    transition: $transition;
+    .menu{
+        flex: 1;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 100%;
+        li{
+            position: relative;
+            a{
+                font-size: 18px;
+                text-transform: capitalize;
+                color: $heading-color;
+                transition: $transition;
+                position: relative;
+                i{
+                    margin-left: 5px;
+                    color: $heading-color;
+                   transition: $transition;
+                }
+                &:hover i{
+                    transform: rotate(90deg);
+                }
+                &::before{
+                    content: "";
+                    position: absolute;
+                    bottom: -2px;
+                    left: 0;
+                    width: 0%;
+                    height: 1px;
+                    background-color: $heading-color;
+                    transition: $transition;
+                }
+                &:hover::before{
+                    width: 100%;
+                }
+            }
+            .small-menu{
+                position: absolute;
+                padding: 20px;
+                border-radius: 10px;
+                max-width: 200px;
+                width: 180px;
+                // top: 150%;
+                left: 50%;
+                transform: translate(-50%,10px);
+                background-color: $bg-color2;
+                opacity: 0;
+                transition: $transition;
+                ul{
+                    li{
+                        margin-bottom: 10px;
+                        a{
+                            display: inline-block;
+                            font-size: 16px;
+                            transition: none;
+                            &::before{
+                                bottom: 0px;
+                                transition: none;
+                            }
+                        }
+                    }
+                }
+            }
+            &.contain-small-menu:hover .small-menu{
+                opacity: 1;
+                transform: translate(-50%,0px);
+            }
+        }
+    }
+}
+.change-header-bg{
+    background-color: white !important;
+    border-bottom: 2px solid $bg-color2;
+}

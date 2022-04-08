@@ -1,0 +1,139 @@
+/* Start Our mission section */ 
+.our-mission{
+    padding: $padding 0;
+    text-align: center;
+    background-color: $heading-color;
+    @include p;
+    color: #fff;
+    span{
+        color: $main-color;
+    }
+}
+/* End Our mission section */ 
+
+
+/* Start Spotlight section */
+.spotlight{
+    padding: $padding 0;
+    background-color: $bg-color2;
+.slider{
+    @include flex;
+    .prev__arrow,.next__arrow{
+        font-size: 34px;
+        color: $paragraph-color;
+        cursor: pointer;
+    }
+    .item{
+        @include flex;
+        figure,.text{
+            flex: 0 0 50%;
+        }
+        .text{
+            // padding: 10px;
+            h4{
+                font-size: 20px;
+                text-transform: capitalize;
+                margin-bottom: 15px;
+            }
+            p{
+                font-size: 16px;
+                padding: 0 10px;
+            }
+        }
+    }
+    @include breakPoints(mobile){
+        .item{
+            figure{
+                flex: 0 0 40%;
+            }
+            .text{
+                flex: 0 0 60%;
+                h4{
+                    font-size: 18px;
+                }
+                p{
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+} 
+/* End Spotlight section */
+
+/* Start Our vision section */ 
+.our-vision{
+    padding: $padding 0;
+    text-align: center;
+    background-color: $main-color;
+    @include p;
+    color: $heading-color;
+}
+/* End Our vision section */ 
+
+/*  Start Our Achivements Section */ 
+.our-achivements{
+    @include padding($padding 0);
+    ul{
+        @include flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        margin: 0 -10px;
+        max-height: fit-content;
+        li{
+            padding:0 5px;
+            flex:0 0 25%;
+            max-width: 25%;
+            height: 100%;
+            .box{
+                padding: 5px 0px;
+                border: 1.5px solid $bg-color2;
+                border-radius: 10px;
+                height: 100%;
+                box-shadow: 0 0 15px rgb(0 0 0 / 5%);
+                text-align: center;
+            }
+            img{
+                max-width: 70px;
+                max-height: 70px;
+            }
+            p{
+                margin: 10px 0;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 1.5;
+                color: $heading-color;
+            }
+        }
+    }
+    @include breakPoints(mobile){
+        ul{
+            li{
+                flex: 0 0 50%;
+                max-width: 50%;
+                max-height: 50%;
+            }
+        }
+    }
+    .reviews{
+        margin-top: 20px;
+        li{
+            flex: 0 0 30%;
+            max-width: 30%;
+        }
+        img{
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+    @include breakPoints(mobile){
+        .reviews{
+            li{
+                flex: 0 0 50%;
+                max-width: 50%;
+                max-height: 50%;
+            }
+        }
+    }
+}
+/*  End Our Achivements Section */ 

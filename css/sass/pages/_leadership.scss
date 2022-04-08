@@ -1,0 +1,115 @@
+/* Start Leaders Section */ 
+.leaders {
+  @include padding($padding null);
+  .team-leaders {
+    justify-content: center;
+    flex-wrap: wrap;
+    .person {
+      padding: 5px;
+      max-width: 280px;
+      margin: 10px;
+      .photo {
+        border-radius: 10px;
+        width: fit-content;
+        border: 2px solid transparent;
+        position: relative;
+        img {
+          position: relative;
+          z-index: 2;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          background: url(../imgs/uplers-shape.svg) no-repeat;
+          background-size: contain;
+          z-index: 1;
+          width: 97%;
+          height: 90%;
+          bottom: -16%;
+          left: 0px;
+        }
+        // ====================
+        a {
+          position: absolute;
+          right: 20px;
+          top: 20px;
+          font-size: 28px;
+          color: #0078b7;
+          transition: $transition;
+          transform: scale(0);
+          &:hover {
+            color: #144b69;
+          }
+        }
+      }
+      &:hover .photo {
+        border: 2px solid $bg-color2;
+      }
+      &:hover .photo a {
+        transform: scale(1);
+      }
+      .info {
+        text-align: center;
+        padding: 10px 0;
+        h4 {
+          font-size: 20px;
+          margin: 10px 0;
+          text-transform: capitalize;
+        }
+        span {
+          font-size: 14px;
+          display: inline-block;
+          margin-bottom: 20px;
+        }
+        p {
+          font-size: 16px;
+          color: $paragraph-color;
+          &::first-letter {
+            text-transform: capitalize;
+          }
+        }
+      }
+    }
+  }
+  @include breakPoints(small) {
+    .team-leaders {
+      .person {
+        max-width: 210px;
+        box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+        border: 2px solid $bg-color2;
+        border-radius: 10px;
+        .photo {
+          border: none;
+
+          a {
+            transform: scale(1);
+          }
+        }
+        &:hover .photo {
+          border: none;
+        }
+      }
+    }
+  }
+  @include breakPoints(mobile) {
+    .team-leaders {
+      .person {
+        max-width: 220px;
+        box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+        border: 2px solid $bg-color2;
+        border-radius: 10px;
+        .photo {
+          border: none;
+
+          a {
+            transform: scale(1);
+          }
+        }
+        &:hover .photo {
+          border: none;
+        }
+      }
+    }
+  }
+}
+/* End Leaders Section */ 
