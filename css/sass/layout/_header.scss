@@ -6,7 +6,7 @@ header{
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 2500;
+    z-index: 2000;
     transition: $transition;
     .menu{
         flex: 1;
@@ -24,7 +24,7 @@ header{
                 i{
                     margin-left: 5px;
                     color: $heading-color;
-                   transition: $transition;
+                    transition: $transition;
                 }
                 &:hover i{
                     transform: rotate(90deg);

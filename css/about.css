@@ -8,6 +8,12 @@
   text-transform: capitalize;
 }
 
+.text-with-border {
+  font-size: 20px;
+  font-weight: 400;
+  border-bottom: 2px;
+}
+
 /* End Headings*/
 /* Start Global Rules */
 * {
@@ -114,6 +120,12 @@ h1, h2, h3, h4, h5, h6 {
 .btn.black-white:hover {
   background-color: white;
   color: #000;
+}
+@media (max-width: 767px) {
+  .btn {
+    padding: 10px;
+    font-size: 17px;
+  }
 }
 
 .send-message {
@@ -236,7 +248,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 2500;
+  z-index: 2000;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
@@ -332,6 +344,7 @@ header .menu li.contain-small-menu:hover .small-menu {
   padding-bottom: 70px;
   min-height: 98vh;
   background-size: cover;
+  background-repeat: no-repeat;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -353,6 +366,45 @@ header .menu li.contain-small-menu:hover .small-menu {
 }
 
 /* End Landing Section */
+/*start how we got here section*/
+.how-we-get-here {
+  padding: 70px 0;
+}
+.how-we-get-here .in-small-media {
+  display: none;
+}
+.how-we-get-here .in-small-media .content p {
+  font-size: 13px;
+  line-height: 1.5;
+  padding: 0 25px;
+}
+@media (max-width: 767px) {
+  .how-we-get-here .in-small-media {
+    display: block;
+  }
+}
+.how-we-get-here .in-larger-screens {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.how-we-get-here .in-larger-screens .col-md-7 {
+  position: relative;
+}
+.how-we-get-here .in-larger-screens .col-md-7::before {
+  content: "";
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: url(../imgs/about-us/line1.svg);
+}
+@media (max-width: 767px) {
+  .how-we-get-here .in-larger-screens {
+    display: none;
+  }
+}
+
+/*End how we got here section*/
 /* Start Our mission section */
 .our-mission {
   padding: 70px 0;
@@ -421,21 +473,18 @@ header .menu li.contain-small-menu:hover .small-menu {
   padding: 0 10px;
 }
 @media (max-width: 767px) {
-  .spotlight .slider .item figure {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 40%;
-            flex: 0 0 40%;
-  }
-  .spotlight .slider .item .text {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 60%;
-            flex: 0 0 60%;
+  .spotlight .slider .item {
+    display: block;
+    text-align: center;
   }
   .spotlight .slider .item .text h4 {
-    font-size: 18px;
+    font-size: 16px;
   }
   .spotlight .slider .item .text p {
-    font-size: 15px;
+    font-size: 13px;
+  }
+  .spotlight .slider .item .text .btn.black {
+    margin: 10px auto;
   }
 }
 

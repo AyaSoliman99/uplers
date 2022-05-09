@@ -8,12 +8,30 @@
   text-transform: capitalize;
 }
 
+@media (max-width: 767px) {
+  .h3 {
+    font-size: 24px;
+  }
+}
 .text-with-border {
-  font-size: 20px;
-  font-weight: 400;
-  border-bottom: 2px;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 20px 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-bottom: 2px #ffda30 solid;
+  padding-bottom: 4px;
+}
+.text-with-border::first-letter {
+  text-transform: capitalize;
 }
 
+@media (max-width: 767px) {
+  .text-with-border {
+    font-size: 13px;
+  }
+}
 /* End Headings*/
 /* Start Global Rules */
 * {
@@ -96,11 +114,11 @@ h1, h2, h3, h4, h5, h6 {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  padding: 15px 25px;
+  padding: 15px 20px;
   border-radius: 30px;
   text-align: center;
   background-color: #ffda30;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
   color: #000;
   text-transform: capitalize;
@@ -366,128 +384,330 @@ header .menu li.contain-small-menu:hover .small-menu {
 }
 
 /* End Landing Section */
-/* Start Leaders Section */
-.leaders {
-  padding-top: 70px;
-  padding-bottom: 70px;
+/*Start form-content Section*/
+.form-content .right-part {
+  background: #f2f2f2;
+  padding: 70px 50px;
 }
-.leaders .team-leaders {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-.leaders .team-leaders .person {
-  padding: 5px;
-  max-width: 280px;
-  margin: 10px;
-}
-.leaders .team-leaders .person .photo {
-  border-radius: 10px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  border: 2px solid transparent;
-  position: relative;
-}
-.leaders .team-leaders .person .photo img {
-  position: relative;
-  z-index: 2;
-}
-.leaders .team-leaders .person .photo::before {
-  content: "";
-  position: absolute;
-  background: url(../imgs/uplers-shape.svg) no-repeat;
-  background-size: contain;
-  z-index: 1;
-  width: 97%;
-  height: 90%;
-  bottom: -16%;
-  left: 0px;
-}
-.leaders .team-leaders .person .photo a {
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  font-size: 28px;
-  color: #0078b7;
+.form-content .right-part .contact-options .number {
+  font-size: 25px;
+  color: #000;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
-  -webkit-transform: scale(0);
-          transform: scale(0);
 }
-.leaders .team-leaders .person .photo a:hover {
-  color: #144b69;
+.form-content .right-part .contact-options .number:hover {
+  color: #ffda30;
 }
-.leaders .team-leaders .person:hover .photo {
-  border: 2px solid #f2f2f2;
+.form-content .right-part .contact-options .mails .mail {
+  margin: 30px 0;
 }
-.leaders .team-leaders .person:hover .photo a {
-  -webkit-transform: scale(1);
-          transform: scale(1);
+.form-content .right-part .contact-options .mails .mail p {
+  color: #707070;
+  margin-bottom: 4px;
 }
-.leaders .team-leaders .person .info {
-  text-align: center;
-  padding: 10px 0;
+.form-content .right-part .contact-options .mails .mail a {
+  color: #000;
 }
-.leaders .team-leaders .person .info h4 {
-  font-size: 20px;
-  margin: 10px 0;
-  text-transform: capitalize;
+.form-content .right-part .contact-options .mails .mail a:hover {
+  text-decoration: underline;
 }
-.leaders .team-leaders .person .info span {
-  font-size: 14px;
-  display: inline-block;
+.form-content .right-part .contact-options .social-links ul li {
+  margin-right: 10px;
+}
+.form-content .right-part .contact-options .social-links ul li a {
+  color: #707070;
+  font-size: 18px;
+}
+.form-content .right-part .contact-options .social-links ul li a:hover {
+  color: #000;
+}
+.form-content .left-part {
+  padding: 70px 50px;
+}
+.form-content .left-part .h3 {
+  text-align: left;
+  margin: 0px auto 40px;
+}
+.form-content .left-part .hiring-options {
   margin-bottom: 20px;
 }
-.leaders .team-leaders .person .info p {
-  font-size: 16px;
+.form-content .left-part .hiring-options li {
+  margin-right: 10px;
+  font-size: 14px;
+  text-transform: capitalize;
+  padding: 10px 15px;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 40px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.form-content .left-part .boxs .box .sub-options {
+  margin: 30px 0;
+}
+.form-content .left-part .boxs .box .sub-options li {
+  margin-right: 15px;
+  padding-bottom: 6px;
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: capitalize;
+  border-bottom: 1px #707070 solid;
+  cursor: pointer;
+}
+.form-content .left-part .boxs .box .sub-options li.active-sub-option {
+  border-bottom-color: #ffda30;
+}
+.form-content .left-part .boxs .box .sub-opt p::first-letter {
+  text-transform: capitalize;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.form-content .left-part .boxs .box .type-of-devs li {
   color: #707070;
 }
-.leaders .team-leaders .person .info p::first-letter {
-  text-transform: capitalize;
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  .leaders .team-leaders .person {
-    max-width: 210px;
-    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border: 2px solid #f2f2f2;
-    border-radius: 10px;
-  }
-  .leaders .team-leaders .person .photo {
-    border: none;
-  }
-  .leaders .team-leaders .person .photo a {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  .leaders .team-leaders .person:hover .photo {
-    border: none;
-  }
-}
-@media (max-width: 767px) {
-  .leaders .team-leaders .person {
-    max-width: 220px;
-    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border: 2px solid #f2f2f2;
-    border-radius: 10px;
-  }
-  .leaders .team-leaders .person .photo {
-    border: none;
-  }
-  .leaders .team-leaders .person .photo a {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  .leaders .team-leaders .person:hover .photo {
-    border: none;
-  }
+.form-content .left-part .boxs .box .type-of-devs li [type=checkbox] + label::before, .form-content .left-part .boxs .box .type-of-devs li [type=checkbox] + label::after {
+  border-color: #707070;
 }
 
-/* End Leaders Section */
+.active-option {
+  background-color: #ffda30;
+  font-weight: 600;
+}
+
+.active-sub-option {
+  border-bottom-color: #ffda30;
+}
+
+/* styling the checkboxes and radios */
+[type=checkbox], [type=radio] {
+  opacity: 0;
+}
+
+[type=checkbox] + label, [type=radio] + label {
+  padding-left: 18px;
+  margin-bottom: 15px;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 15px;
+  font-size: 15px;
+  text-transform: capitalize;
+}
+
+[type=checkbox] + label::before, [type=radio] + label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 12px;
+  width: 12px;
+  border: 1px #000 solid;
+  background: #fff;
+}
+
+[type=checkbox] + label::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 4px;
+  width: 8px;
+  border: 2px #000 solid;
+  -webkit-transform: rotate(124deg);
+          transform: rotate(124deg);
+  border-bottom: none;
+  border-left: none;
+  opacity: 0;
+}
+
+[type=checkbox]:checked + label::after {
+  opacity: 1;
+}
+
+/* some plus features for radio inputs*/
+[type=radio] + label::before {
+  border-radius: 50%;
+}
+
+[type=radio] + label::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background-color: #000;
+  opacity: 0;
+}
+
+[type=radio]:checked + label::after {
+  opacity: 1;
+}
+
+/* styling inputs of type text */
+[type=text], [type=email], [type=number] {
+  width: 100%;
+  border: none;
+  border-bottom: 1.5px #000 solid;
+  margin: 10px 0;
+  padding: 5px 0 10px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+[type=text]::-webkit-input-placeholder, [type=email]::-webkit-input-placeholder, [type=number]::-webkit-input-placeholder {
+  font-size: 15px;
+  color: #000;
+  text-transform: capitalize;
+}
+[type=text]::-moz-placeholder, [type=email]::-moz-placeholder, [type=number]::-moz-placeholder {
+  font-size: 15px;
+  color: #000;
+  text-transform: capitalize;
+}
+[type=text]:-ms-input-placeholder, [type=email]:-ms-input-placeholder, [type=number]:-ms-input-placeholder {
+  font-size: 15px;
+  color: #000;
+  text-transform: capitalize;
+}
+[type=text]::-ms-input-placeholder, [type=email]::-ms-input-placeholder, [type=number]::-ms-input-placeholder {
+  font-size: 15px;
+  color: #000;
+  text-transform: capitalize;
+}
+[type=text]::placeholder, [type=email]::placeholder, [type=number]::placeholder {
+  font-size: 15px;
+  color: #000;
+  text-transform: capitalize;
+}
+[type=text]:focus, [type=email]:focus, [type=number]:focus {
+  outline: none;
+  border-bottom-color: #ffda30;
+}
+
+@media (max-width: 767px) {
+  .form-content {
+    font-size: 15px;
+  }
+  .form-content .left-part, .form-content .right-part {
+    padding: 70px 10px;
+  }
+  .form-content .left-part .hiring-options li {
+    font-size: 12px;
+    padding: 10px;
+    margin-bottom: 5px;
+  }
+
+  .form-content .right-part .contact-options .mails .mail p {
+    font-size: 14px;
+  }
+
+  [type=text]::-webkit-input-placeholder, [type=email]::-webkit-input-placeholder, [type=number]::-webkit-input-placeholder {
+    font-size: 12px;
+  }
+
+  [type=text]::-moz-placeholder, [type=email]::-moz-placeholder, [type=number]::-moz-placeholder {
+    font-size: 12px;
+  }
+
+  [type=text]:-ms-input-placeholder, [type=email]:-ms-input-placeholder, [type=number]:-ms-input-placeholder {
+    font-size: 12px;
+  }
+
+  [type=text]::-ms-input-placeholder, [type=email]::-ms-input-placeholder, [type=number]::-ms-input-placeholder {
+    font-size: 12px;
+  }
+
+  [type=text]::placeholder, [type=email]::placeholder, [type=number]::placeholder {
+    font-size: 12px;
+  }
+
+  [type=checkbox] + label, [type=radio] + label {
+    font-size: 13px;
+  }
+
+  [type=checkbox] + label::before, [type=radio] + label::before {
+    height: 10px;
+    width: 10px;
+  }
+
+  [type=radio] + label::after {
+    height: 6px;
+    width: 6px;
+  }
+
+  [type=checkbox] + label::after {
+    height: 3px;
+    width: 7px;
+  }
+}
+/*End form-content Section*/
+/* Start Our branches Section */
+.our-branchs {
+  padding: 70px 0px 0px;
+}
+.our-branchs .branches-names {
+  font-size: 14px;
+}
+.our-branchs .branches-names .h3 {
+  text-align: left;
+  font-size: 18px;
+  margin: 5px 0;
+}
+.our-branchs .branches-names .btn {
+  font-size: 13px;
+  padding: 5px 10px;
+}
+.our-branchs .branches-names li {
+  padding: 20px 10px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  position: relative;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 10px 0 0;
+}
+.our-branchs .branches-names li.active-option::after {
+  display: none;
+}
+.our-branchs .branches-names li::after {
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 2px;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  margin: 5px 0;
+  bottom: -3px;
+  left: 0;
+}
+.our-branchs .branches-names li .address {
+  font-size: 14px;
+  font-weight: normal;
+  margin: 10px 0;
+}
+.our-branchs .branches-names li .number {
+  margin: 10px 0;
+}
+.our-branchs .branches-names li .number a {
+  font-size: 14px;
+  color: #707070;
+}
+.our-branchs .branches-names li .number a:hover {
+  text-decoration: underline;
+}
+
+/* End Our branches Section */
 /* Start Footer Section */
 footer {
   padding-top: 70px;

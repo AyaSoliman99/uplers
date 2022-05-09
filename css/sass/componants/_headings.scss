@@ -1,11 +1,33 @@
 /* Start Headings */
 .h3{
     font-size: 30px;
-    // text-transform: capitalize;
     text-align: center;
     margin: 20px auto 40px;
     &::first-letter{
         text-transform: capitalize;
+    }
+}
+@include breakPoints(mobile){
+    .h3{
+        font-size: 24px;
+    }
+}
+.text-with-border{
+    font: {
+        size:16px;
+        weight:600;
+    }
+    margin: 20px 0;
+    width: fit-content;
+    border-bottom: 2px $main-color solid;
+    padding-bottom: 4px;
+    &::first-letter{
+        text-transform: capitalize;
+    }
+}
+@include breakPoints(mobile){
+    .text-with-border{
+        font-size: 13px;
     }
 }
 /* End Headings*/

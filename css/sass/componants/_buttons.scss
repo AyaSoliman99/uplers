@@ -39,11 +39,11 @@
     display: block;
     margin: 20px 0;
     width: fit-content;
-    @include padding(15px 25px);
+    @include padding(15px 20px);
     border-radius: 30px;
     text-align: center;
     background-color: $main-color;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
     color:$heading-color;
     text-transform: capitalize;
@@ -61,6 +61,12 @@
     &.black-white:hover{
         background-color: white;
         color: $heading-color;
+    }
+    @include breakPoints(mobile){
+        &{
+            padding: 10px;
+            font-size: 17px;
+        }
     }
 }
 

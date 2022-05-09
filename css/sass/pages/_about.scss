@@ -1,3 +1,41 @@
+/*start how we got here section*/
+.how-we-get-here{
+    padding: $padding 0;
+    .in-small-media{
+        display: none;
+        .content{
+            p{
+                font-size: 13px;
+                line-height: 1.5;
+                padding: 0 25px;
+            }
+        }
+    }
+    @include breakPoints(mobile){
+        .in-small-media{
+            display: block;
+        }
+    }
+    .in-larger-screens{
+        align-items: center;
+        .col-md-7{
+            position: relative;
+            &::before{
+                content: "";
+                top: 0;
+                left: 0;
+                position: absolute;
+                background: url(../imgs/about-us/line1.svg);
+            }
+        }
+    }
+    @include breakPoints(mobile){
+        .in-larger-screens{
+            display: none;
+        }
+    }
+}
+/*End how we got here section*/
 /* Start Our mission section */ 
 .our-mission{
     padding: $padding 0;
@@ -43,16 +81,18 @@
     }
     @include breakPoints(mobile){
         .item{
-            figure{
-                flex: 0 0 40%;
-            }
+            display: block;
+            // justify-content: center;
+            text-align: center;
             .text{
-                flex: 0 0 60%;
                 h4{
-                    font-size: 18px;
+                    font-size: 16px;
                 }
                 p{
-                    font-size: 15px;
+                    font-size: 13px;
+                }
+                .btn.black{
+                    margin: 10px auto;
                 }
             }
         }

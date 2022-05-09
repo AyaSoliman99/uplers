@@ -1,0 +1,287 @@
+/*Start form-content Section*/
+.form-content{
+    .right-part{
+        background: $bg-color2;
+        padding : $padding 50px;
+        .contact-options{
+            .number{
+                font-size: 25px;
+                color:$heading-color;
+                transition: $transition;
+                &:hover{
+                    color:$main-color;
+                }
+            }
+            .mails{
+                .mail{
+                    margin: 30px 0;
+                    p{
+                        color:$paragraph-color;
+                        margin-bottom: 4px;
+                    }
+                    a{
+                        color:$heading-color;
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+            .social-links{
+                ul{
+                    li{
+                        margin-right: 10px;
+                        a{
+                            color: $paragraph-color;
+                            font-size: 18px;
+                            &:hover{
+                                color:$heading-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .left-part{
+        padding : $padding 50px;
+        .h3{
+            text-align: left;
+            margin: 0px auto 40px;
+        }
+        .hiring-options{
+            margin-bottom: 20px;
+            li{
+                margin-right: 10px;
+                font-size: 14px;
+                text-transform: capitalize;
+                padding: 10px 15px;
+                box-shadow: 0 0 5px rgb(0 0 0 / 20%);
+                border-radius: 40px;
+                font-weight: 500;
+                cursor: pointer;
+                
+            }
+        }
+        .boxs{
+            .box{
+                .sub-options{
+                    margin: 30px 0;
+                    li{
+                        margin-right: 15px;
+                        padding-bottom:6px ;
+                        font-size: 15px;
+                        font-weight: 500;
+                        text-transform: capitalize;
+                        border-bottom:1px $paragraph-color solid ;
+                        cursor: pointer;
+                        &.active-sub-option{
+                            border-bottom-color:$main-color ;
+                        }
+                    }
+                }
+                .sub-opt{
+                    p{
+                        &::first-letter{
+                            text-transform: capitalize;
+                            font-size: 18px;
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+                .type-of-devs{
+                    // display:none;
+                    li{
+                        color: $paragraph-color;
+                        [type="checkbox"] + label::before,[type="checkbox"] + label::after{
+                            border-color: $paragraph-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.active-option{
+    background-color: $main-color;
+    font-weight: 600;
+}
+.active-sub-option{
+    border-bottom-color:$main-color ;
+}
+
+/* styling the checkboxes and radios */
+[type="checkbox"],[type='radio']{
+    opacity: 0;
+}
+[type="checkbox"] + label,[type='radio'] + label{
+    padding-left: 18px;
+    margin-bottom: 15px;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 15px;
+    font-size: 15px;
+    text-transform: capitalize;
+}
+[type="checkbox"] + label::before,[type="radio"] + label::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include size(12px);
+    border: 1px $heading-color solid;
+    background: #fff;
+}
+[type="checkbox"] + label::after{
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    @include size(8px ,4px);
+    border: 2px #000 solid;
+    transform: rotate(124deg);
+    border-bottom: none;
+    border-left: none;
+    opacity: 0;
+}
+[type="checkbox"]:checked + label::after{
+    opacity: 1;
+}
+/* some plus features for radio inputs*/ 
+[type="radio"] + label::before{
+    border-radius: 50%;
+}
+[type="radio"] + label::after{
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    @include size(8px);
+    border-radius: 50%;
+    background-color: $heading-color;
+    opacity: 0;
+}
+[type="radio"]:checked + label::after{
+    opacity: 1;
+}
+/* styling inputs of type text */
+[type="text"],[type="email"],[type='number']{
+    width: 100%;
+    border: none;
+    border-bottom: 1.5px $heading-color solid;
+    margin: 10px 0;
+    padding: 5px 0 10px;
+    transition: $transition;
+    &::placeholder{
+        font-size: 15px;
+        color: $heading-color;
+        text-transform: capitalize;
+    }
+    &:focus{
+        outline: none;
+        border-bottom-color: $main-color;
+    }
+} 
+
+@include breakPoints(mobile){
+    .form-content{
+        font-size: 15px;
+        .left-part,.right-part{
+            padding: 70px 10px;
+        }
+        .left-part{
+            .hiring-options{
+                li{
+                    font-size: 12px;
+                    padding: 10px;
+                    margin-bottom: 5px;
+                }
+            }
+        }
+        
+    }
+    
+.form-content .right-part .contact-options .mails .mail p{
+    font-size: 14px;
+}
+[type="text"],[type="email"],[type='number']{
+    &::placeholder{
+        font-size: 12px;
+    }
+}
+    [type="checkbox"] + label,[type='radio'] + label{
+        font-size: 13px;
+    }
+    [type=checkbox] + label::before, [type=radio] + label::before {
+        @include size(10px);
+    }
+    [type=radio] + label::after{
+        @include size(6px);
+    }
+    [type=checkbox] + label::after{
+        @include size(7px,3px)
+    }
+}
+/*End form-content Section*/
+
+/* Start Our branches Section */ 
+.our-branchs{
+    padding : $padding 0px 0px;
+    .branches-names{
+        font-size: 14px;
+        .h3{
+            text-align: left;
+            font-size: 18px;
+            margin: 5px 0;
+        }
+        .btn{
+            font-size: 13px;
+            padding:5px 10px;
+        }
+        li{
+            padding: 20px 10px;
+            transition: $transition;
+            position: relative;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin: 10px 0 0;
+            &.active-option{
+                &::after{
+                    display: none;
+                }
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                width: 90%;
+                height: 2px;
+                border-radius: 5px;
+                background-color: $bg-color2;
+                margin: 5px 0;
+                bottom: -3px;
+                left: 0;
+            }
+            .address{
+                font-size: 14px;
+                font-weight: normal;
+                margin: 10px 0;
+            }
+            .number{
+                margin: 10px 0;
+                a{
+                    font-size: 14px;
+                    color: $paragraph-color;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+/* End Our branches Section */ 

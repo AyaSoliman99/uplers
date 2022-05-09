@@ -8,6 +8,20 @@
   text-transform: capitalize;
 }
 
+.text-with-border {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 20px 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-bottom: 2px #ffda30 solid;
+  padding-bottom: 4px;
+}
+.text-with-border::first-letter {
+  text-transform: capitalize;
+}
+
 /* End Headings*/
 /* Start Global Rules */
 * {
@@ -90,11 +104,11 @@ h1, h2, h3, h4, h5, h6 {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  padding: 15px 25px;
+  padding: 15px 20px;
   border-radius: 30px;
   text-align: center;
   background-color: #ffda30;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
   color: #000;
   text-transform: capitalize;
@@ -114,6 +128,12 @@ h1, h2, h3, h4, h5, h6 {
 .btn.black-white:hover {
   background-color: white;
   color: #000;
+}
+@media (max-width: 767px) {
+  .btn {
+    padding: 10px;
+    font-size: 17px;
+  }
 }
 
 .send-message {
@@ -236,7 +256,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 2500;
+  z-index: 2000;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
