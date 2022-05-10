@@ -3,3 +3,8 @@
     margin-bottom: 25px;
     text-transform: capitalize
 }
+@include breakPoints(mobile){
+    .hash-heading{
+        font-size: 1.3rem;
+    }
+}

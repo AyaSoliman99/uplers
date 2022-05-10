@@ -1,7 +1,7 @@
 // ==============creat counter
 let counterSec=document.querySelector(".counters");
 
-let nums=document.querySelectorAll(".counters .counter h3");
+let nums = document.querySelectorAll(".counters .counter h3");
 
 let started=false;
 

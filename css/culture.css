@@ -39,6 +39,11 @@
   text-transform: capitalize;
 }
 
+@media (max-width: 767px) {
+  .hash-heading {
+    font-size: 1.3rem;
+  }
+}
 /* Start Global Rules */
 * {
   -webkit-box-sizing: border-box;
@@ -362,6 +367,41 @@ header .menu li.contain-small-menu:hover .small-menu {
   border-bottom: 2px solid #f2f2f2;
 }
 
+/* Start Uplers philosophy */
+.upler-philosophy {
+  padding: 70px 0;
+}
+.upler-philosophy h3.hash-heading {
+  text-align: center;
+}
+.upler-philosophy .philo {
+  padding: 10px;
+  text-align: center;
+}
+.upler-philosophy .philo img {
+  max-width: 100px;
+  max-height: 110px;
+  height: 110px;
+}
+.upler-philosophy .philo p {
+  padding: 0 10px;
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-top: 5px;
+  line-height: 1.6;
+  text-transform: capitalize;
+}
+
+/* End Uplers philosophy */
+/*  Start remote-life Section */
+.remote-life {
+  padding: 70px 0;
+}
+.remote-life .slick-imgs figure {
+  margin: 0 10px;
+}
+
+/*  End remote-life Section */
 /* Start women of upler section */
 .women-of-uplers {
   padding: 70px 0;
@@ -446,6 +486,11 @@ header .menu li.contain-small-menu:hover .small-menu {
           transform: rotate(180deg);
 }
 
+@media (max-width: 767px) {
+  .key-drivers .values p {
+    font-size: 1.4rem;
+  }
+}
 /* End key-drivers section */
 /* Start Footer Section */
 footer {

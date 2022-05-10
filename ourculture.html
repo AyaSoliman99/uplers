@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/bootstrap-grid.css" />
     <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/slick.css" />
     <link rel="stylesheet" href="css/culture.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -46,6 +47,71 @@
       </form>
     </div>
     <!-- End contact us popup -->
+
+    <!-- Start Uplers philosophy -->
+    <section class="upler-philosophy">
+      <div class="container">
+        <h3 class="hash-heading">#Uplersophy - The Uplers Philosophy</h3>
+        <div class="row">
+          <div class="col-md-3 col-6">
+            <div class="philo">
+              <img src="./imgs/culture/feel-family-icon.svg" alt="feeling family">
+              <p>the felling family</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-6">
+            <div class="philo">
+              <img src="./imgs/culture/team-spirit-icon.svg" alt="feeling family">
+              <p>Team-Spirit & Unity Over Everything</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-6">
+            <div class="philo">
+              <img src="./imgs/culture/no-matter-icon.svg" alt="feeling family">
+              <p>got your back no matter what</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-6">
+            <div class="philo">
+              <img src="./imgs/culture/team-trust-icon.svg" alt="feeling family">
+              <p>trust in team</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Uplers philosophy -->
+
+    <!-- Start remote-life Section -->
+    <section class="remote-life">
+      <div class="container">
+        <h3 class="hash-heading">#RemoteLifeAtUplers</h3>
+      </div>
+      <div class="slick-imgs">
+        <figure>
+          <img src="./imgs/culture/lifeuplers-01.jpg" alt="">
+        </figure>
+        <figure>
+          <img src="./imgs/culture/lifeuplers-02.jpg" alt="">
+        </figure>
+        <figure>
+          <img src="./imgs/culture/lifeuplers-03.jpg" alt="">
+        </figure>
+        <figure>
+          <img src="./imgs/culture/lifeuplers-04.jpg" alt="">
+        </figure>
+        <figure>
+          <img src="./imgs/culture/lifeuplers-05.jpg" alt="">
+        </figure>
+        <figure>
+          <img src="./imgs/culture/lifeuplers-06.jpg" alt="">
+        </figure>
+        <figure>
+          <img src="./imgs/culture/lifeuplers-07.jpg" alt="">
+        </figure>
+      </div>
+    </section>
+    <!-- End remote-life Section -->
 
     <!-- Start women of upler section -->
     <section class="women-of-uplers">
@@ -333,6 +399,45 @@
     </footer>
     <!-- End Footer -->
     <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script>
+      $('.slick-imgs').slick({
+  infinite: true,
+  speed: 300,
+  slidesToShow: 5,
+  slidesToScroll: 1,
+  autoplay:true,
+  arrows:false,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        infinite: true,
+      }
+    },
+    {
+      breakpoint: 700,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+
+    </script>
     <script src="js/main.js"></script>
   </body>
 </html>
