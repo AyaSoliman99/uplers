@@ -3,6 +3,9 @@ let counterSec=document.querySelector(".counters");
 
 let nums = document.querySelectorAll(".counters .counter h3");
 
+console.log(nums)
+
+
 let started=false;
 
 window.addEventListener("scroll",function(){

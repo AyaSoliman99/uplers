@@ -1,3 +1,103 @@
+ /* Start people-first section */
+ .people-first{
+    padding: $padding 0;
+    background-color: $main-color;
+    .heart{
+        position: relative;
+        i{
+            font-size: 80px;
+            color: red;
+        }
+    }
+    h5{
+        font-size: 18px;
+    }
+    p{
+        line-height: 1.6;
+    }
+}
+@include breakPoints(mobile){
+    .people-first{
+         h5{
+             font-size: 16px;
+         }
+         p{
+             font-size: 14px;
+         }
+         .heart{
+             margin-bottom: 8px;
+         }
+     }
+ }
+ /* End people-first section */
+
+/*  Start vibe Section */
+.vibe{
+    position: relative;
+    background: #f8f8f8;
+    &::before{
+        content: "";
+        position: absolute;
+        background-image: url(../imgs/culture/wave-dots-shape.svg);
+        background-repeat: no-repeat;
+        @include size(200px ,100px);
+        left: 0;
+        top: 20%;
+    }
+    .container{
+        overflow-x: hidden;
+        .text{
+            h3{
+                font-size: 22px;
+                margin-bottom: 15px;
+            }
+            ul{
+                li{
+                    font-size: 18px;
+                    text-transform: capitalize;
+                    font-weight: 400;
+                    margin-bottom: 8px;
+                }
+            }
+        }
+    }
+    .img-content{
+        position: relative;
+        &::before{
+            content: "";
+            position: absolute;
+            background-image: url(../imgs/culture/circle-dash-shap.svg);
+            background-repeat: no-repeat;
+            width: 100px;
+            height: 100px;
+            left: -40px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}  
+@include breakPoints(mobile){
+    .vibe{
+        &::before{
+            display: none;
+        }
+        .text{
+            h3{
+                font-size: 18px;
+            }
+        }
+        .container{
+            max-width: 750px;
+        }
+        .img-content{
+            &::before{
+                display: none;
+            }
+        }
+    }
+}
+/*  End vibe Section */  
+
 /* Start Uplers philosophy */
 .upler-philosophy{
     padding: $padding 0;

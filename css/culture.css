@@ -367,6 +367,96 @@ header .menu li.contain-small-menu:hover .small-menu {
   border-bottom: 2px solid #f2f2f2;
 }
 
+/* Start people-first section */
+.people-first {
+  padding: 70px 0;
+  background-color: #ffda30;
+}
+.people-first .heart {
+  position: relative;
+}
+.people-first .heart i {
+  font-size: 80px;
+  color: red;
+}
+.people-first h5 {
+  font-size: 18px;
+}
+.people-first p {
+  line-height: 1.6;
+}
+
+@media (max-width: 767px) {
+  .people-first h5 {
+    font-size: 16px;
+  }
+  .people-first p {
+    font-size: 14px;
+  }
+  .people-first .heart {
+    margin-bottom: 8px;
+  }
+}
+/* End people-first section */
+/*  Start vibe Section */
+.vibe {
+  position: relative;
+  background: #f8f8f8;
+}
+.vibe::before {
+  content: "";
+  position: absolute;
+  background-image: url(../imgs/culture/wave-dots-shape.svg);
+  background-repeat: no-repeat;
+  height: 100px;
+  width: 200px;
+  left: 0;
+  top: 20%;
+}
+.vibe .container {
+  overflow-x: hidden;
+}
+.vibe .container .text h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+.vibe .container .text ul li {
+  font-size: 18px;
+  text-transform: capitalize;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+.vibe .img-content {
+  position: relative;
+}
+.vibe .img-content::before {
+  content: "";
+  position: absolute;
+  background-image: url(../imgs/culture/circle-dash-shap.svg);
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  left: -40px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+@media (max-width: 767px) {
+  .vibe::before {
+    display: none;
+  }
+  .vibe .text h3 {
+    font-size: 18px;
+  }
+  .vibe .container {
+    max-width: 750px;
+  }
+  .vibe .img-content::before {
+    display: none;
+  }
+}
+/*  End vibe Section */
 /* Start Uplers philosophy */
 .upler-philosophy {
   padding: 70px 0;
