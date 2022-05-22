@@ -1,5 +1,95 @@
- /* Start people-first section */
- .people-first{
+/* Start landing section */ 
+.landing-section{
+    padding: $padding 0;
+    background-image: url(../imgs/culture/banner-shape.svg);
+    background-repeat: no-repeat;
+    background-size: 85%;
+    position: relative;
+    &::before{
+        content: "";
+        position: absolute;
+        background-image: url(../imgs/culture/two-circle-shape.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        @include size(170px);
+        top: 60%;
+        left: 0;
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        background-image: url(../imgs/culture/dots-shape.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        @include size(150px);
+        top: 40%;
+        right: 0;
+    }
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .content{
+            max-width: 75%;
+            h3{
+                font : {
+                    weight:normal;
+                    size:50px;
+                }
+            }
+        }
+    }
+
+}
+@include breakPoints(medium) {
+    .landing-section{
+        &::before{
+            @include size(120px);
+        }
+        &::after{
+            @include size(110px);
+        }
+    }
+}
+@include breakPoints(small) {
+    .landing-section{
+        &::before{
+            @include size(110px);
+        }
+        &::after{
+            @include size(90px);
+        }
+        .container{
+            .content{
+                h3{
+                    font-size: 30px;
+                }
+            }
+    }}
+}
+@include breakPoints(mobile) {
+    .landing-section{
+        &::before{
+            @include size(80px);
+            top: 40%;
+        }
+        &::after{
+            @include size(50px);
+        }
+        .container{
+            .content{
+                h3{
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+}
+/* End landing section */ 
+
+
+/* Start people-first section */
+.people-first{
     padding: $padding 0;
     background-color: $main-color;
     .heart{
@@ -124,6 +214,55 @@
 }
 /* End Uplers philosophy */ 
 
+/* Start Uplers Vision Section */ 
+.uplers-vision{
+    padding: $padding 0;
+    background-color: $main-color;
+    .vision-content{
+        h3{
+            font: {
+                size: 30px;
+                weight:bold;
+            }
+            text-transform: capitalize;
+            margin-bottom: 20px;
+        }
+        .visions{
+            margin: 15px 0;
+            .vision{
+                padding: 10px ;
+                text-align: center;
+                figure{
+                    padding: 10px ;
+                }
+                span{
+                    margin-top: 8px;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+    .img{
+        margin-bottom: 15px;
+        figure{
+            height: 100%;
+            img{
+            height: 100%;
+        }
+        }
+    }
+}
+@include breakPoints(mobile){
+    .uplers-vision{
+        .vision-content{
+            h3{
+                font-size: 20px;
+            }
+        }
+    }
+}
+/* End Uplers Vision Section */ 
+
 /*  Start remote-life Section */ 
 .remote-life{
     padding: $padding 0;
@@ -134,6 +273,72 @@
     }
 }
 /*  End remote-life Section */ 
+
+
+
+
+/* Start Remote Diaries */ 
+.remote-diaries{
+    padding: $padding 0;
+    h3{
+        margin: 15px;
+        font-size: 30px;
+    }
+    .col-md-7{
+        h3{
+            font-size: 20px;
+            font-weight: 500;
+            margin: 5px 0;
+        }
+        span{
+            color:$paragraph-color ;
+            text-transform: capitalize;
+        }
+        .texts{
+            margin-top: 20px;
+            overflow-y: scroll;
+            max-height: 300px;
+        p{
+            margin: 10px 5px;
+            font-size: 15px;
+        }
+        &::-webkit-scrollbar{
+            background-color: $paragraph-color;
+            border-radius: 15px;
+            width: 5px;
+            cursor: pointer;
+        }
+        &::-webkit-scrollbar-track{
+            background-color: $paragraph-color;
+            border-radius: 15px;
+            width: 5px;
+        }
+        &::-webkit-scrollbar-thumb{
+            background-color: $main-color;
+            border-radius: 15px;
+            cursor: pointer;
+            width: 5px;
+        }
+        }
+    }
+    .slick-dots{
+        display: flex;
+        li{
+            margin: 0 5px;
+            button{
+                @include size(20px);
+                border-radius: 50%;
+                border: none;
+            }
+            &.slick-active{
+                button{
+                    background-color: $main-color;
+                }
+            }
+        }
+    }
+}
+/* ENd Remote Diaries */ 
 
 /* Start women of upler section */ 
 .women-of-uplers{
