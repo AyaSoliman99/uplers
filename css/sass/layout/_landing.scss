@@ -19,4 +19,30 @@
         }
     }
 }
+@include breakPoints(small){
+    .landing-section{
+        min-height: 70vh !important;
+        .text{
+            h2{
+                font-size: 30px;
+            }
+            p{
+                font-size: 17px;
+            }
+        }
+    }
+}
+@include breakPoints(mobile){
+    .landing-section{
+        min-height: 50vh !important;
+        .text{
+            h2{
+                font-size: 24px;
+            }
+            p{
+                font-size: 16px;
+            }
+        }
+    }
+}
 /* End Landing Section */ 

@@ -1,0 +1,92 @@
+/* Start Projects Section */ 
+
+.our-projects{
+    padding: $padding 0;
+    .explain{
+        font-size: 18px;
+        margin-bottom: 30px;
+        font-weight: 500;
+        line-height: 1.5;
+    }
+    .projects-part{
+        h3{
+        font-size: 25px;
+        font-weight: 800;
+        text-transform: capitalize;
+        margin-bottom: 30px;
+        }
+        .box{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10px;
+            border: 1px solid;
+            border-color: $bg-color2;
+            border-radius: 20px;
+            margin-bottom: 20px;   
+            transition: $transition;
+            &:hover{
+                border-color: $main-color;
+            }
+            .text-content{
+                h4{
+                    font-size: 20px;
+                    margin: 15px 0;
+                }
+                .services{
+                    span{
+                        font-size: 15px;
+                        margin-right: 5px;
+                        margin-bottom: 10px;
+                        display: inline-block;
+                        border-right: 1px solid $paragraph-color;
+                        padding-right: 5px;
+                        &:last-child{
+                            border-right: none;
+                        }
+                    }
+                }
+            }
+            .icon-wrapper{
+                margin-right: 20px;
+                @include size(40px);
+                border-radius: 50%;
+                text-align: center;
+                @include flex;
+                background-color: $bg-color2;
+                i{
+                    font-size: 18px;
+                    color: $paragraph-color;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+@include breakPoints(mobile){
+    .our-projects{
+        .explain{
+            font-size: 16px;
+        }
+        .projects-part{
+            .box{
+                .text-content{
+                    h4{
+                        font-size: 18px;
+                    }
+                    .services{
+                        span{
+                            font-size: 14px;
+                        }
+                    }
+                }
+                .icon-wrapper{
+                    i{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+/* End Projects Section */ 

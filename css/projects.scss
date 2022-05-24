@@ -1,12 +1,13 @@
 @import "sass/helpers/vriables";
+@import "sass/helpers/mixins";
 @import "sass/componants/headings";
 @import "sass/componants/logo";
 @import "sass/componants/socialLinks";
-@import "sass/helpers/mixins";
 @import "sass/bourbon/bourbon";
 @import "sass/layout/grid";
 @import "sass/componants/buttons";
+@import "sass/layout/landing";
 @import "sass/layout/scdule_call";
 @import "sass/layout/header";
-@import "sass/pages/homePage";
+@import "sass/pages/projects";
 @import "sass/layout/footer";

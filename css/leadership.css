@@ -8,12 +8,30 @@
   text-transform: capitalize;
 }
 
+@media (max-width: 767px) {
+  .h3 {
+    font-size: 24px;
+  }
+}
 .text-with-border {
-  font-size: 20px;
-  font-weight: 400;
-  border-bottom: 2px;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 20px 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-bottom: 2px #ffda30 solid;
+  padding-bottom: 4px;
+}
+.text-with-border::first-letter {
+  text-transform: capitalize;
 }
 
+@media (max-width: 767px) {
+  .text-with-border {
+    font-size: 13px;
+  }
+}
 /* End Headings*/
 /* Start Global Rules */
 * {
@@ -96,11 +114,11 @@ h1, h2, h3, h4, h5, h6 {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  padding: 15px 25px;
+  padding: 15px 20px;
   border-radius: 30px;
   text-align: center;
   background-color: #ffda30;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
   color: #000;
   text-transform: capitalize;
@@ -365,6 +383,28 @@ header .menu li.contain-small-menu:hover .small-menu {
   line-height: 1.7;
 }
 
+@media (min-width: 768px) and (max-width: 991px) {
+  .landing-section {
+    min-height: 70vh !important;
+  }
+  .landing-section .text h2 {
+    font-size: 30px;
+  }
+  .landing-section .text p {
+    font-size: 17px;
+  }
+}
+@media (max-width: 767px) {
+  .landing-section {
+    min-height: 50vh !important;
+  }
+  .landing-section .text h2 {
+    font-size: 24px;
+  }
+  .landing-section .text p {
+    font-size: 16px;
+  }
+}
 /* End Landing Section */
 /* Start Leaders Section */
 .leaders {
