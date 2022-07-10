@@ -263,6 +263,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* =================End buttons==================== */
+/*Start Header Section*/
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -281,6 +282,63 @@ header {
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
+header .menu-bar {
+  display: none;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  position: relative;
+}
+header .menu-bar::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -8px;
+  height: 40px;
+  width: 40px;
+  opacity: 0;
+  -webkit-transform: scale(0.1) rotate(90deg);
+          transform: scale(0.1) rotate(90deg);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  background: url(../imgs/uplers-shape-black.svg) no-repeat;
+  background-size: contain;
+  z-index: -1;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+header .menu-bar:hover::before {
+  opacity: 1;
+  -webkit-transform: scale(1) rotate(0deg);
+          transform: scale(1) rotate(0deg);
+}
+header .menu-bar .inner-bar {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header .menu-bar .inner-bar::before, header .menu-bar .inner-bar::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+}
+header .menu-bar:hover .inner-bar::after, header .menu-bar:hover .inner-bar::before {
+  background-color: white;
+}
 header .menu {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -288,9 +346,6 @@ header .menu {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   height: 100%;
 }
 header .menu li {
@@ -367,6 +422,58 @@ header .menu li.contain-small-menu:hover .small-menu {
   border-bottom: 2px solid #f2f2f2;
 }
 
+@media (max-width: 991px) {
+  header .logo {
+    position: relative;
+    z-index: 2;
+  }
+  header .menu-bar {
+    display: block;
+    z-index: 2;
+  }
+  header .menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    position: fixed;
+    width: 100%;
+    background: #ffda30;
+    left: -100%;
+    top: 0;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+  }
+  header .menu li {
+    margin-left: 30px;
+  }
+  header .menu li .small-menu {
+    position: relative;
+    margin-left: inherit;
+    margin-top: 10px;
+    background-color: #ffda30;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    left: 0;
+    -webkit-transform: none;
+            transform: none;
+  }
+  header .menu li.contain-small-menu:hover .small-menu {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+/*End Header Section*/
 /* Start landing section */
 .landing-section {
   padding: 70px 0;

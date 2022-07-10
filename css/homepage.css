@@ -8,6 +8,11 @@
   text-transform: capitalize;
 }
 
+@media (max-width: 767px) {
+  .h3 {
+    font-size: 24px;
+  }
+}
 .text-with-border {
   font-size: 16px;
   font-weight: 600;
@@ -22,6 +27,11 @@
   text-transform: capitalize;
 }
 
+@media (max-width: 767px) {
+  .text-with-border {
+    font-size: 13px;
+  }
+}
 /* End Headings*/
 /* Start Global Rules */
 * {
@@ -242,6 +252,80 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* =================End buttons==================== */
+/*  Start schedule a call section */
+.schedule-call {
+  padding: 70px 0;
+  background-color: #f2f2f2;
+}
+.schedule-call [type=color], .schedule-call [type=date], .schedule-call [type=datetime], .schedule-call [type=datetime-local], .schedule-call [type=email], .schedule-call [type=month], .schedule-call [type=number], .schedule-call [type=password], .schedule-call [type=search], .schedule-call [type=tel], .schedule-call [type=text], .schedule-call [type=time], .schedule-call [type=url], .schedule-call [type=week], .schedule-call input:not([type]), .schedule-call textarea,
+.schedule-call .want-options {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  border-bottom: 2px solid #000;
+  margin-bottom: 40px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.schedule-call [type=color]:focus, .schedule-call [type=date]:focus, .schedule-call [type=datetime]:focus, .schedule-call [type=datetime-local]:focus, .schedule-call [type=email]:focus, .schedule-call [type=month]:focus, .schedule-call [type=number]:focus, .schedule-call [type=password]:focus, .schedule-call [type=search]:focus, .schedule-call [type=tel]:focus, .schedule-call [type=text]:focus, .schedule-call [type=time]:focus, .schedule-call [type=url]:focus, .schedule-call [type=week]:focus, .schedule-call input:not([type]):focus, .schedule-call textarea:focus {
+  outline: none;
+  border-bottom-color: #ffda30;
+}
+.schedule-call input[type=text]::-webkit-input-placeholder, .schedule-call input[type=email]::-webkit-input-placeholder, .schedule-call textarea::-webkit-input-placeholder {
+  color: #000;
+}
+.schedule-call input[type=text]::-moz-placeholder, .schedule-call input[type=email]::-moz-placeholder, .schedule-call textarea::-moz-placeholder {
+  color: #000;
+}
+.schedule-call input[type=text]:-ms-input-placeholder, .schedule-call input[type=email]:-ms-input-placeholder, .schedule-call textarea:-ms-input-placeholder {
+  color: #000;
+}
+.schedule-call input[type=text]::-ms-input-placeholder, .schedule-call input[type=email]::-ms-input-placeholder, .schedule-call textarea::-ms-input-placeholder {
+  color: #000;
+}
+.schedule-call input[type=text]::placeholder,
+.schedule-call input[type=email]::placeholder,
+.schedule-call textarea::placeholder {
+  color: #000;
+}
+.schedule-call .want-options {
+  position: relative;
+  bottom: 2px;
+}
+.schedule-call .want-options p {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #000;
+}
+.schedule-call .want-options ul {
+  width: 100%;
+  display: none;
+  position: absolute;
+  top: 106%;
+  left: 0;
+  background-color: #fff;
+}
+.schedule-call .want-options ul li {
+  font-size: 16px;
+  padding: 5px;
+  text-transform: capitalize;
+  border-bottom: 1px solid #f2f2f2;
+  cursor: pointer;
+}
+.schedule-call .want-options ul li:hover {
+  background-color: #f2f2f2;
+}
+
+/*  End schedule a call section */
+/*Start Header Section*/
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -260,6 +344,63 @@ header {
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
+header .menu-bar {
+  display: none;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  position: relative;
+}
+header .menu-bar::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -8px;
+  height: 40px;
+  width: 40px;
+  opacity: 0;
+  -webkit-transform: scale(0.1) rotate(90deg);
+          transform: scale(0.1) rotate(90deg);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  background: url(../imgs/uplers-shape-black.svg) no-repeat;
+  background-size: contain;
+  z-index: -1;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+header .menu-bar:hover::before {
+  opacity: 1;
+  -webkit-transform: scale(1) rotate(0deg);
+          transform: scale(1) rotate(0deg);
+}
+header .menu-bar .inner-bar {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header .menu-bar .inner-bar::before, header .menu-bar .inner-bar::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+}
+header .menu-bar:hover .inner-bar::after, header .menu-bar:hover .inner-bar::before {
+  background-color: white;
+}
 header .menu {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -267,9 +408,6 @@ header .menu {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   height: 100%;
 }
 header .menu li {
@@ -346,6 +484,58 @@ header .menu li.contain-small-menu:hover .small-menu {
   border-bottom: 2px solid #f2f2f2;
 }
 
+@media (max-width: 991px) {
+  header .logo {
+    position: relative;
+    z-index: 2;
+  }
+  header .menu-bar {
+    display: block;
+    z-index: 2;
+  }
+  header .menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    position: fixed;
+    width: 100%;
+    background: #ffda30;
+    left: -100%;
+    top: 0;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+  }
+  header .menu li {
+    margin-left: 30px;
+  }
+  header .menu li .small-menu {
+    position: relative;
+    margin-left: inherit;
+    margin-top: 10px;
+    background-color: #ffda30;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    left: 0;
+    -webkit-transform: none;
+            transform: none;
+  }
+  header .menu li.contain-small-menu:hover .small-menu {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+/*End Header Section*/
 /* Start Landing Section*/
 .landing {
   padding-top: 70px;
@@ -510,7 +700,7 @@ header .menu li.contain-small-menu:hover .small-menu {
   font-size: 20px;
   text-transform: capitalize;
   color: white;
-  z-index: 2000;
+  z-index: 2;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
@@ -528,7 +718,7 @@ header .menu li.contain-small-menu:hover .small-menu {
           transform: translate(-50%, -50%);
   z-index: 3;
   font-size: 60px;
-  color: #f0fdfa;
+  color: rgb(240, 253, 250);
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
@@ -863,79 +1053,6 @@ header .menu li.contain-small-menu:hover .small-menu {
   }
 }
 /* End Case Studies section */
-/*  Start schedule a call section */
-.schedule-call {
-  padding: 70px 0;
-  background-color: #f2f2f2;
-}
-.schedule-call [type=color], .schedule-call [type=date], .schedule-call [type=datetime], .schedule-call [type=datetime-local], .schedule-call [type=email], .schedule-call [type=month], .schedule-call [type=number], .schedule-call [type=password], .schedule-call [type=search], .schedule-call [type=tel], .schedule-call [type=text], .schedule-call [type=time], .schedule-call [type=url], .schedule-call [type=week], .schedule-call input:not([type]), .schedule-call textarea,
-.schedule-call .want-options {
-  width: 100%;
-  padding: 10px;
-  border: none;
-  background-color: transparent;
-  border-bottom: 2px solid #000;
-  margin-bottom: 40px;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-}
-.schedule-call [type=color]:focus, .schedule-call [type=date]:focus, .schedule-call [type=datetime]:focus, .schedule-call [type=datetime-local]:focus, .schedule-call [type=email]:focus, .schedule-call [type=month]:focus, .schedule-call [type=number]:focus, .schedule-call [type=password]:focus, .schedule-call [type=search]:focus, .schedule-call [type=tel]:focus, .schedule-call [type=text]:focus, .schedule-call [type=time]:focus, .schedule-call [type=url]:focus, .schedule-call [type=week]:focus, .schedule-call input:not([type]):focus, .schedule-call textarea:focus {
-  outline: none;
-  border-bottom-color: #ffda30;
-}
-.schedule-call input[type=text]::-webkit-input-placeholder, .schedule-call input[type=email]::-webkit-input-placeholder, .schedule-call textarea::-webkit-input-placeholder {
-  color: #000;
-}
-.schedule-call input[type=text]::-moz-placeholder, .schedule-call input[type=email]::-moz-placeholder, .schedule-call textarea::-moz-placeholder {
-  color: #000;
-}
-.schedule-call input[type=text]:-ms-input-placeholder, .schedule-call input[type=email]:-ms-input-placeholder, .schedule-call textarea:-ms-input-placeholder {
-  color: #000;
-}
-.schedule-call input[type=text]::-ms-input-placeholder, .schedule-call input[type=email]::-ms-input-placeholder, .schedule-call textarea::-ms-input-placeholder {
-  color: #000;
-}
-.schedule-call input[type=text]::placeholder,
-.schedule-call input[type=email]::placeholder,
-.schedule-call textarea::placeholder {
-  color: #000;
-}
-.schedule-call .want-options {
-  position: relative;
-  bottom: 2px;
-}
-.schedule-call .want-options p {
-  padding: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  font-size: 16px;
-  text-transform: capitalize;
-  color: #000;
-}
-.schedule-call .want-options ul {
-  width: 100%;
-  display: none;
-  position: absolute;
-  top: 106%;
-  left: 0;
-  background-color: #fff;
-}
-.schedule-call .want-options ul li {
-  font-size: 16px;
-  padding: 5px;
-  text-transform: capitalize;
-  border-bottom: 1px solid #f2f2f2;
-  cursor: pointer;
-}
-.schedule-call .want-options ul li:hover {
-  background-color: #f2f2f2;
-}
-
-/*  End schedule a call section */
 /* Start Footer Section */
 footer {
   padding-top: 70px;
